@@ -1,27 +1,33 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
+let employeesArray
+
 
 // Collect employee data
-let firstName= "crystal"; 
-let lastName="cruz";
-let salary= 60;
-
-function firstName1(){
-    console.log(firstName);
-    return;
-}
-function lastName1(){
-    console.log(lastName);
-    return;
-}
-function salary1(){
-    console.log(salary);
-    return;
-}
 const collectEmployees = function() {
-    console.log(firstName,lastName,salary);
-  return;
+ let firstName;prompt (`Enter First Name`)
+let lastName;
+let salary= 0;
+console.log (isNaN( firstName));
+if (!isNaN(firstName)){
+  alert (`Alphabetical Character Only`);
+} else {
+  lastName= prompt (`Enter Last Name`);
+
+}
+if(!isNaN(lastName)){ 
+  alert (`Alphabetical Character Only`);
+}else {
+  salary = prompt (`Enter Your Salary`);
+}
+if (isNaN(salary)){
+alert(`Please Enter Numerical Values`); }
+
+
+console.log (`${firstName}, ${lastName} , ${salary}`);
+  
   // TODO: Get user input to create and return an array of employee objects
+  employeesArray.push
 }
 collectEmployees()
 
