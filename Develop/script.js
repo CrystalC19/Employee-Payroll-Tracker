@@ -1,44 +1,81 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-let employeesArray
+let employeesArray= [];
+let addingMoreEmployees= "Yes";
 
 
 // Collect employee data
 const collectEmployees = function() {
- let firstName;prompt (`Enter First Name`)
-let lastName;
-let salary= 0;
-console.log (isNaN( firstName));
-if (!isNaN(firstName)){
+
+  //While loop added 
+
+  while (addingMoreEmployees === "Yes"){
+ let firstNameInput;prompt (`Enter First Name`)
+let lastNameInput;
+let salaryInput= 0;
+const employeeData={
+  firstName: ``,
+  lastName: ``,
+  salary: 0,
+};
+
+// Starting If Statements with alerts and isNAN
+console.log (isNaN(firstNameInput));
+if (!isNaN(firstNameInput)){
   alert (`Alphabetical Character Only`);
-} else {
-  lastName= prompt (`Enter Last Name`);
+} else {employeeData.firstName=firstNameInput;
+  lastNameInput= prompt (`Enter Last Name`);
 
 }
-if(!isNaN(lastName)){ 
+if(!isNaN(lastNameInput)){ 
   alert (`Alphabetical Character Only`);
-}else {
-  salary = prompt (`Enter Your Salary`);
+}else {employeeData.lastName=lastNameInput;
+  salaryInput = prompt (`Enter Your Salary`);
 }
-if (isNaN(salary)){
+if (isNaN(salaryInput)){
 alert(`Please Enter Numerical Values`); }
+else{
+  employeeData.salary=salaryInput;
+}
 
+console.log (employeeData);
 
-console.log (`${firstName}, ${lastName} , ${salary}`);
   
-  // TODO: Get user input to create and return an array of employee objects
-  employeesArray.push
+  // pushing an array
+  employeesArray.push(employeeData);
+
+
+  addingMoreEmployees =prompt(`Continue adding employees? Yes/No`);
+
+  if (addingMoreEmployees !== `Yes` && addingMoreEmployees !== `No`) {
+    alert(`Please enter Yes or No`)
+  }
+
+}
 }
 collectEmployees()
 
 // Display the average salary
+//Using Template literals
+
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+  function avg (salaryInput, salary){
+    return(salaryInput + salary)/2;
+  }
+  console.log (`The Average Salary is ${avg(salaryInput, salary)}`);
+
+
+
 }
 
 // Select a random employee
+// Using Math. Random
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+function getRandom(max){
+  return Math.floor(Math.random() * Max)
+}
+console.log(getRandom())
+console.log(Math.random())
 }
 
 /*
