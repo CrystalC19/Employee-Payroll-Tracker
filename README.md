@@ -26,6 +26,8 @@ THEN my employee data is displayed on the page sorted alphabetically by last nam
 
 ## Link to Deployed Application
 https://github.com/CrystalC19/Employee-Payroll-Tracker.git
+https://crystalc19.github.io/Employee-Payroll-Tracker/index.html
+
 
 
 
